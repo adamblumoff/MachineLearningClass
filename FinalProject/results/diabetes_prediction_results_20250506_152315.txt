@@ -1,0 +1,115 @@
+Diabetes Prediction Model Results - 2025-05-06 15:23:15
+================================================================================
+
+Loading and preparing data...
+Merging features...
+
+Dataset Information:
+Total number of samples: 3701
+Number of diabetes cases: 430
+Number of non-diabetes cases: 3271
+
+Preparing features and target...
+Handling missing values...
+Splitting and scaling data...
+
+Calculating class weights...
+
+Training and evaluating models...
+
+Training Logistic Regression...
+Logistic Regression Accuracy: 0.988
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99       655
+           1       0.91      1.00      0.95        86
+
+    accuracy                           0.99       741
+   macro avg       0.95      0.99      0.97       741
+weighted avg       0.99      0.99      0.99       741
+
+
+Confusion Matrix:
+[[646   9]
+ [  0  86]]
+
+Training Random Forest...
+Random Forest Accuracy: 1.000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       655
+           1       1.00      1.00      1.00        86
+
+    accuracy                           1.00       741
+   macro avg       1.00      1.00      1.00       741
+weighted avg       1.00      1.00      1.00       741
+
+
+Confusion Matrix:
+[[655   0]
+ [  0  86]]
+
+Training Gradient Boosting...
+Gradient Boosting Accuracy: 1.000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       655
+           1       1.00      1.00      1.00        86
+
+    accuracy                           1.00       741
+   macro avg       1.00      1.00      1.00       741
+weighted avg       1.00      1.00      1.00       741
+
+
+Confusion Matrix:
+[[655   0]
+ [  0  86]]
+
+Training SVM...
+SVM Accuracy: 0.976
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.97      0.99       655
+           1       0.83      1.00      0.91        86
+
+    accuracy                           0.98       741
+   macro avg       0.91      0.99      0.95       741
+weighted avg       0.98      0.98      0.98       741
+
+
+Confusion Matrix:
+[[637  18]
+ [  0  86]]
+
+Best performing model: Random Forest with accuracy: 1.000
+
+Feature Importance:
+    Feature  Importance
+2    LBXGLU    0.710307
+6   HOMA_IR    0.156738
+1  RIDAGEYR    0.052865
+3   LBDINSI    0.050067
+5       BMI    0.018314
+4     LBXTC    0.010266
+0  RIAGENDR    0.001444
+
+Performing cross-validation on best model...
+
+Cross-validation scores: [1. 1. 1. 1. 1.]
+Mean CV score: 1.000 (+/- 0.000)
+
+================================================================================
+Final Summary:
+Results have been saved to: results\diabetes_prediction_results_20250506_152315.txt
+Best model: Random Forest
+Best accuracy: 1.000
+Mean CV score: 1.000 (+/- 0.000)
+================================================================================
